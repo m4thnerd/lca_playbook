@@ -18,6 +18,17 @@ Use it with Claude Code (`claude`), OpenAI Codex (`codex`), Google Antigravity
 
 ---
 
+## Video Walkthroughs
+
+Click any card to open the **[interactive 1080p walkthrough player](https://m4thnerd.github.io/lca_playbook/)** (with chapter jump buttons and `1x`-`2x` speed controls), or download the MP4s from the **[v1.0.0 release](https://github.com/m4thnerd/lca_playbook/releases/tag/v1.0.0)**:
+
+| Product, Design & Non-Technical Collaborators | Software Engineers, Tech Leads & LCA Operators |
+|---|---|
+| [![Watch Video 1: Collaborator Overview (5:07)](docs/assets/video-collaborator-overview.png)](https://m4thnerd.github.io/lca_playbook/#collaborator-overview)<br>**[1. Collaborator Overview (`5:07`)](https://m4thnerd.github.io/lca_playbook/#collaborator-overview)** - Prototyping with an agent, Architecture Pressure `1-5`, User Stories & Essential Requirements, and visual HTML cards. | [![Watch Video 3: Technical Crash Course (10:31)](docs/assets/video-engineer-deep-dive.png)](https://m4thnerd.github.io/lca_playbook/#engineer-deep-dive)<br>**[3. Technical Crash Course (`10:31`)](https://m4thnerd.github.io/lca_playbook/#engineer-deep-dive)** - `Bound -> Converge -> Stabilize`, 3 preflights, `convergence-review`, `general-stability-review`, UX loops, and 3-step setup. |
+| [![Watch Video 2: GitHub with an Agent (3:29)](docs/assets/video-github-with-an-agent.png)](https://m4thnerd.github.io/lca_playbook/#github-with-an-agent)<br>**[2. GitHub with an Agent (`3:29`)](https://m4thnerd.github.io/lca_playbook/#github-with-an-agent)** - Zero terminal commands: branches, commits, Draft PRs, and merge conflicts on one calm cheat sheet. | [![Watch Video 4: Module Charters & Positional Lanes (10:10)](docs/assets/video-module-charters-deep-dive.png)](https://m4thnerd.github.io/lca_playbook/#module-charters-deep-dive)<br>**[4. Module Charters & Positional Lanes (`10:10`)](https://m4thnerd.github.io/lca_playbook/#module-charters-deep-dive)** - `Fast` & `Full-Spec` lanes, Day-2 evolution, `50+` module strangler retrofits, and `10` starter Hazard Tags. |
+
+---
+
 ## Why Teams Use the LCA Playbook
 
 1. **Shrink the human design surface 10x-30x without losing architectural grip.**

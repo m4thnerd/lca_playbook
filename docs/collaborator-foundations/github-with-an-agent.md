@@ -7,6 +7,12 @@ Your job is simply to keep track of *where your work lives* and *when it is read
 
 Back to **[Collaborator Foundations (`docs/collaborator-foundations/`)](README.md)** | Related guides: **[Shaping Rough Ideas into User Stories](shaping-ideas-into-user-stories.md)** | **[Infrastructure with an Agent](infrastructure-with-an-agent.md)**
 
+## Watch the 3.5-Minute Walkthrough
+
+[![Watch GitHub with an Agent (3:29)](../assets/video-github-with-an-agent.png)](https://m4thnerd.github.io/lca_playbook/#github-with-an-agent)
+
+Click the card above to open the **[interactive 1080p walkthrough player](https://m4thnerd.github.io/lca_playbook/#github-with-an-agent)** (`3:29`, with chapter jump buttons), or read the single-page visual guide right below.
+
 ## Everything You Need on One Page
 
 ![Everything you need fits on one page](assets/github/00-one-page-cheat-sheet.jpg)
