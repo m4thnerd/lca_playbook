@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "convergence-review"
+version = "0.1.0"
+description = "Automated CODER <> REVIEWERS convergence loop CLI tool"
+requires-python = ">=3.10"
+
+[project.scripts]
+convergence-review = "convergence_review.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

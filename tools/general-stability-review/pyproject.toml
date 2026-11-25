@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "general-stability-review"
+version = "0.1.0"
+description = "One-pass general stability review helper for branch-quality review"
+requires-python = ">=3.10"
+
+[project.scripts]
+general-stability-review = "general_stability_review.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

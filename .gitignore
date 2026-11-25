@@ -1,0 +1,49 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python environments and build artifacts
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+.eggs/
+*.egg-info/
+*.whl
+
+# Credentials and machine-local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*service-account*.json
+AGENTS_LOCAL*.md
+MAINTAINER_CHEATSHEET.md
+.claude/settings.local.json
+.claude/*.local.json
+
+# User-customized LLM configuration (copy from llm_config.example.py)
+/llm_config.py
+
+# Generated review output and local workspaces
+/tmp/
+/local/
+/diagnostics/
+*.log
+*.sqlite*
+*.db
+
+# Project- and organization-specific calibration stays local
+case-studies/local/*
+!case-studies/local/README.md

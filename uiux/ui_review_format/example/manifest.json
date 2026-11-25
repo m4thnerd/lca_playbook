@@ -1,0 +1,56 @@
+{
+  "title": "Example review page",
+  "subtitle": "Two cards: one before/after change, one A/B/neither question",
+  "generated": "2026-10-20",
+  "source": {"branch": "example-branch", "commit": "0000000"},
+  "sections": [
+    {
+      "id": "decisions",
+      "heading": "Decisions waiting",
+      "items": [
+        {
+          "id": "Q-1",
+          "title": "Should the account page header use the brand colour?",
+          "tags": ["customer", "question"],
+          "summary_html": "<p>The account page header is grey today. Option A makes it blue to match the rest of the site. Option B keeps the desktop page as it is and only changes the phone layout.</p>",
+          "ask": "Pick one: A (blue header everywhere) · B (desktop unchanged) · neither",
+          "score": 4,
+          "score_note": "reviewers preferred A on phone",
+          "options": [
+            {"label": "A", "title": "Blue header (built, not merged)",
+             "images": [{"src": "after.png", "caption": "Account page, desktop, option A", "kind": "desktop"},
+                        {"src": "after.png", "caption": "Account page, phone, option A", "kind": "phone"}]},
+            {"label": "B", "title": "Grey desktop, blue phone (mockup)",
+             "images": [{"src": "before.png", "caption": "Account page, desktop, current", "kind": "desktop"},
+                        {"src": "after.png", "caption": "Account page, phone, option B", "kind": "phone"}],
+             "note_html": "<p>Phone image is the same as option A.</p>"},
+            {"label": "neither", "title": "Keep the current page"}
+          ],
+          "details_html": "<p>Technical detail goes here: commit ids, test names, charter references.</p>",
+          "links": [{"text": "Screenshot review process", "href": "../../ui_screenshot_review.md"}]
+        }
+      ]
+    },
+    {
+      "id": "changes",
+      "heading": "Changes made",
+      "intro_html": "<p>Already built; shown so you can object.</p>",
+      "items": [
+        {
+          "id": "C-1",
+          "status": "built and merged",
+          "title": "Header colour on the sign-in page",
+          "tags": ["visitor", "built"],
+          "summary_html": "<p>The sign-in page header changed from grey to blue.</p>",
+          "ask": "",
+          "options": [
+            {"label": "before", "title": "Before the change",
+             "images": [{"src": "before.png", "caption": "Sign-in, desktop, before", "kind": "desktop"}]},
+            {"label": "after", "title": "After the change",
+             "images": [{"src": "after.png", "caption": "Sign-in, desktop, after", "kind": "desktop"}]}
+          ]
+        }
+      ]
+    }
+  ]
+}

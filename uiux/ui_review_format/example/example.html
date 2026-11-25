@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example review page</title><style>
+:root{color-scheme:light dark;--bg:#f5f4f0;--card:#fff;--ink:#1d1f21;--muted:#5f6368;--line:#dad7cf;--accent:#1f55a8;
+--ask-bg:#fff4d1;--ask-line:#d49b00;--pill:#ebe8e1;--on:#1f55a8;--on-ink:#fff}
+:root[data-theme=light]{color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#15171a;--card:#1f2226;--ink:#e7e6e2;--muted:#a4a8ae;
+--line:#373c43;--accent:#93b6ff;--ask-bg:#3b321c;--ask-line:#c8961a;--pill:#2d3137;--on:#93b6ff;--on-ink:#111}}
+:root[data-theme=dark]{color-scheme:dark;--bg:#15171a;--card:#1f2226;--ink:#e7e6e2;--muted:#a4a8ae;
+--line:#373c43;--accent:#93b6ff;--ask-bg:#3b321c;--ask-line:#c8961a;--pill:#2d3137;--on:#93b6ff;--on-ink:#111}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;overflow-wrap:anywhere}
+a{color:var(--accent)} code{font-size:.9em} .muted{color:var(--muted)}
+header{max-width:1500px;margin:0 auto;padding:24px 16px 0}
+h1{margin:0 0 4px;font-size:26px;line-height:1.25} .sub{margin:0 0 6px;color:var(--muted)}
+.meta-line{font-size:14px;color:var(--muted);margin:0 0 12px}
+.legend{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:4px 16px;font-size:15px}
+.bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:14px 0 0}
+button{font:inherit;font-size:13px;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px 11px;cursor:pointer}
+button[aria-pressed=true]{background:var(--on);color:var(--on-ink);border-color:var(--on)}
+.wrap{display:grid;grid-template-columns:250px minmax(0,1fr);gap:28px;max-width:1500px;margin:0 auto;padding:20px 16px 48px}
+nav.toc{position:sticky;top:12px;align-self:start;max-height:calc(100vh - 24px);overflow:auto;font-size:14px}
+nav.toc ol{list-style:none;margin:0;padding:0} nav.toc ol ol{margin:2px 0 10px 10px;font-size:13px}
+nav.toc a{text-decoration:none} nav.toc li{margin:2px 0}
+h2{font-size:21px;margin:8px 0 12px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 20px;margin:0 0 18px}
+.item h3{margin:0 0 4px;font-size:19px;line-height:1.3} .iid{color:var(--muted);font-weight:500}
+.status{margin:0 0 6px;font-size:14px;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 8px}
+.owner{font-size:12px;font-weight:700;border:1px solid var(--ink);border-radius:4px;padding:0 7px}
+.pill{font-size:12px;background:var(--pill);border-radius:999px;padding:1px 9px}
+.summary p{margin:6px 0}
+.ask{border-left:5px solid var(--ask-line);background:var(--ask-bg);border-radius:6px;padding:10px 14px;margin:12px 0;font-weight:600}
+.ask .k{display:block;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.score{margin:6px 0;font-size:14px;color:var(--muted)}
+details.fold{margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
+summary{cursor:pointer;font-weight:600;color:var(--accent)}
+.options{display:flex;flex-wrap:wrap;gap:24px;margin-top:12px}
+.option{flex:1 1 320px;min-width:0;max-width:100%}
+.option h4{margin:0 0 8px;font-size:15px}
+.olabel{display:inline-block;min-width:1.7em;text-align:center;background:var(--ink);color:var(--card);border-radius:4px;padding:0 6px;margin-right:8px}
+.shots{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start}
+figure{margin:0;flex:0 1 auto;min-width:0;max-width:100%}
+figure img{display:block;width:100%;max-width:100%;height:auto;border:1px solid var(--line);border-radius:4px;cursor:zoom-in}
+figcaption{font-size:13px;color:var(--muted);margin-top:4px}
+.same{display:inline-block;font-size:12px;background:var(--pill);border-radius:4px;padding:0 6px;color:var(--ink)}
+.more pre{overflow-x:auto} .more table{display:block;overflow-x:auto}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;padding:12px;z-index:10;cursor:zoom-out}
+#lb[hidden]{display:none} #lb img{max-width:100%;max-height:100%;background:#fff}
+[hidden]{display:none!important}
+@media (max-width:900px){.wrap{grid-template-columns:minmax(0,1fr)}
+nav.toc{position:static;max-height:none} nav.toc ol ol{display:none}}
+@media (max-width:520px){.item{padding:14px 12px} .option{flex-basis:100%} h1{font-size:22px}}
+</style></head>
+<body>
+<header><h1>Example review page</h1><p class="sub">Two cards: one before/after change, one A/B/neither question</p><p class="meta-line">2026-10-20 &middot; branch <code>example-branch</code> &middot; commit <code>0000000</code></p>
+<div class="legend"><p>Each card is one change or one question. Read the summary and the yellow box: that is the ask. Open <b>Options</b> to see a screenshot of each choice, at the device sizes that matter, with the state each image comes from under it; click an image to enlarge it. <b>Details</b> holds technical background and links and is optional.</p></div>
+<div class="bar"><button type="button" id="expand">Expand all</button>
+<button type="button" id="collapse">Collapse all</button>
+<span class="muted" style="margin-left:8px;font-size:13px">Filter:</span>
+<button type="button" id="all-tags" aria-pressed="true">all</button><button type="button" class="chip" data-tag="customer" aria-pressed="false">customer</button><button type="button" class="chip" data-tag="question" aria-pressed="false">question</button><button type="button" class="chip" data-tag="visitor" aria-pressed="false">visitor</button><button type="button" class="chip" data-tag="built" aria-pressed="false">built</button></div></header>
+<div class="wrap"><nav class="toc" aria-label="Contents"><ol><li><a href="#decisions">Decisions waiting</a> <span class="muted">(1)</span><ol><li><a href="#item-Q-1">Q-1 Should the account page header use the brand colour?</a></li></ol></li><li><a href="#changes">Changes made</a> <span class="muted">(1)</span><ol><li><a href="#item-C-1">C-1 Header colour on the sign-in page</a></li></ol></li></ol></nav>
+<main><section class="sec" id="decisions"><h2>Decisions waiting</h2><article class="item" id="item-Q-1" data-tags="[&quot;customer&quot;, &quot;question&quot;]"><h3><span class="iid">Q-1</span> Should the account page header use the brand colour?</h3><div class="meta"><span class="pill">customer</span><span class="pill">question</span></div><div class="summary"><p>The account page header is grey today. Option A makes it blue to match the rest of the site. Option B keeps the desktop page as it is and only changes the phone layout.</p></div><div class="ask"><span class="k">The ask</span>Pick one: A (blue header everywhere) · B (desktop unchanged) · neither</div><p class="score">Score: <b>4</b> &middot; reviewers preferred A on phone</p><details class="fold"><summary>Options (3): screenshots</summary><div class="options"><div class="option"><h4><span class="olabel">A</span>Blue header (built, not merged)</h4><div class="shots"><figure class="desktop" style="width:480px"><a href="after.png" target="_blank" rel="noopener"><img src="after.png" width="480" height="300" loading="lazy" alt="Account page, desktop, option A"></a><figcaption>Account page, desktop, option A </figcaption></figure><figure class="phone" style="width:260px"><a href="after.png" target="_blank" rel="noopener"><img src="after.png" width="260" height="162" loading="lazy" alt="Account page, phone, option A"></a><figcaption>Account page, phone, option A </figcaption></figure></div></div><div class="option"><h4><span class="olabel">B</span>Grey desktop, blue phone (mockup)</h4><div class="shots"><figure class="desktop" style="width:480px"><a href="before.png" target="_blank" rel="noopener"><img src="before.png" width="480" height="300" loading="lazy" alt="Account page, desktop, current"></a><figcaption>Account page, desktop, current </figcaption></figure><figure class="phone" style="width:260px"><a href="after.png" target="_blank" rel="noopener"><img src="after.png" width="260" height="162" loading="lazy" alt="Account page, phone, option B"></a><figcaption>Account page, phone, option B <span class="same">no change: same image as A</span></figcaption></figure></div><p>Phone image is the same as option A.</p></div><div class="option"><h4><span class="olabel">neither</span>Keep the current page</h4><div class="shots"><p class="muted">No screenshot for this option.</p></div></div></div></details><details class="fold more"><summary>Details</summary><p>Technical detail goes here: commit ids, test names, charter references.</p><ul><li><a href="../../ui_screenshot_review.md">Screenshot review process</a></li></ul></details></article></section><section class="sec" id="changes"><h2>Changes made</h2><p>Already built; shown so you can object.</p><article class="item" id="item-C-1" data-tags="[&quot;visitor&quot;, &quot;built&quot;]"><h3><span class="iid">C-1</span> Header colour on the sign-in page</h3><p class="status">built and merged</p><div class="meta"><span class="pill">visitor</span><span class="pill">built</span></div><div class="summary"><p>The sign-in page header changed from grey to blue.</p></div><details class="fold"><summary>Before and after: screenshots</summary><div class="options"><div class="option"><h4><span class="olabel">before</span>Before the change</h4><div class="shots"><figure class="desktop" style="width:480px"><a href="before.png" target="_blank" rel="noopener"><img src="before.png" width="480" height="300" loading="lazy" alt="Sign-in, desktop, before"></a><figcaption>Sign-in, desktop, before </figcaption></figure></div></div><div class="option"><h4><span class="olabel">after</span>After the change</h4><div class="shots"><figure class="desktop" style="width:480px"><a href="after.png" target="_blank" rel="noopener"><img src="after.png" width="480" height="300" loading="lazy" alt="Sign-in, desktop, after"></a><figcaption>Sign-in, desktop, after </figcaption></figure></div></div></div></details></article></section></main></div>
+<div id="lb" hidden><img alt=""></div>
+<script>
+(function(){
+var active=new Set(), clear=document.getElementById('all-tags');
+function apply(){
+  document.querySelectorAll('.item').forEach(function(it){
+    var tags=JSON.parse(it.getAttribute('data-tags')||'[]');
+    it.hidden=active.size>0&&!tags.some(function(t){return active.has(t);});
+  });
+  document.querySelectorAll('section.sec').forEach(function(s){
+    s.hidden=active.size>0&&!s.querySelector('.item:not([hidden])');
+  });
+  document.querySelectorAll('nav.toc a[href^="#item-"]').forEach(function(a){
+    var it=document.getElementById(a.getAttribute('href').slice(1));
+    a.parentNode.hidden=!!(it&&it.hidden);
+  });
+  if(clear)clear.setAttribute('aria-pressed',String(active.size===0));
+}
+document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){
+  var t=b.getAttribute('data-tag');
+  if(active.has(t))active.delete(t);else active.add(t);
+  b.setAttribute('aria-pressed',String(active.has(t)));apply();
+});});
+if(clear)clear.addEventListener('click',function(){active.clear();
+  document.querySelectorAll('.chip').forEach(function(b){b.setAttribute('aria-pressed','false');});apply();});
+function fold(open){document.querySelectorAll('details.fold').forEach(function(d){d.open=open;});}
+document.getElementById('expand').addEventListener('click',function(){fold(true);});
+document.getElementById('collapse').addEventListener('click',function(){fold(false);});
+var lb=document.getElementById('lb'), big=lb.querySelector('img');
+document.addEventListener('click',function(e){
+  var img=e.target.closest&&e.target.closest('figure img'); if(!img)return;
+  e.preventDefault(); big.src=img.currentSrc||img.src; big.alt=img.alt; lb.hidden=false;
+});
+lb.addEventListener('click',function(){lb.hidden=true;big.removeAttribute('src');});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)lb.click();});
+})();
+</script>
+</body></html>
