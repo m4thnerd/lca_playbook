@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lead Coding Agent (LCA) Playbook - Video Walkthroughs</title>
+<style>
+  :root {
+    --bg: #0b1424;
+    --card: #122038;
+    --border: #243b5e;
+    --ink: #f1f5f9;
+    --soft: #cbd5e1;
+    --muted: #8ea4c2;
+    --teal: #2dd4bf;
+    --blue: #38bdf8;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    padding: 36px 24px 72px;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  h1 { margin: 0 0 8px 0; font-size: 30px; letter-spacing: -0.02em; }
+  .sub { margin: 0; color: var(--soft); font-size: 15.5px; line-height: 1.5; }
+  a.repo-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(45, 212, 191, 0.14);
+    border: 1px solid rgba(45, 212, 191, 0.45);
+    color: #ccfbf1;
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+  a.repo-btn:hover { background: rgba(45, 212, 191, 0.26); }
+  .track-label {
+    margin: 28px 0 14px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--teal);
+  }
+  .video-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 28px;
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.35);
+    scroll-margin-top: 20px;
+  }
+  .video-card.active-target {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 2px rgba(45, 212, 191, 0.25), 0 18px 42px rgba(0, 0, 0, 0.4);
+  }
+  .vc-hdr {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .vc-hdr h2 { margin: 0; font-size: 21px; }
+  .vc-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .meta { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; color: var(--teal); }
+  .dl-link { font-size: 13px; color: var(--soft); text-decoration: underline; }
+  video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    background: #050b14;
+    border: 1px solid #1e3a5f;
+    display: block;
+  }
+  .bar-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .jumps, .speeds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  button.jump, button.spd {
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    color: #e0f2fe;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  button.spd {
+    background: rgba(148, 163, 184, 0.12);
+    border-color: rgba(148, 163, 184, 0.3);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  button.jump:hover, button.spd:hover, button.spd.active {
+    background: rgba(45, 212, 191, 0.24);
+    border-color: var(--teal);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div>
+      <h1>Lead Coding Agent (LCA) Playbook - Video Walkthroughs</h1>
+      <p class="sub">Four narrated 1080p walkthroughs: two for product &amp; non-technical collaborators, and two for software engineers &amp; tech leads.</p>
+    </div>
+    <a class="repo-btn" href="https://github.com/m4thnerd/lca_playbook">Back to GitHub Repository &rarr;</a>
+  </header>
+
+  <div class="track-label">Track 1 &middot; Product, Design &amp; Non-Technical Collaborators</div>
+
+  <section class="video-card" id="collaborator-overview">
+    <div class="vc-hdr">
+      <h2>1. Collaborator Overview (Non-Technical &amp; Product Roles)</h2>
+      <div class="vc-controls">
+        <span class="meta">5:07 &middot; 1080p</span>
+        <a class="dl-link" href="https://github.com/m4thnerd/lca_playbook/releases/download/v1.0.0/lca-playbook-collaborator-overview-1080p.mp4">Download MP4</a>
+      </div>
+    </div>
+    <video id="v1" controls preload="metadata" playsinline src="https://github.com/m4thnerd/lca_playbook/releases/download/v1.0.0/lca-playbook-collaborator-overview-1080p.mp4"></video>
+    <div class="bar-row">
+      <div class="jumps">
+        <button class="jump" onclick="seek('v1', 0)">0:00 Intro</button>
+        <button class="jump" onclick="seek('v1', 28.7)">0:29 Tested Prototypes &amp; Step 7 Review</button>
+        <button class="jump" onclick="seek('v1', 92.8)">1:33 Weighing Architecture Pressure (2 vs 5)</button>
+        <button class="jump" onclick="seek('v1', 169.8)">2:50 Clear Specifications (Stories &amp; ERs)</button>
+        <button class="jump" onclick="seek('v1', 244.0)">4:04 Visual HTML Review Cards</button>
+        <button class="jump" onclick="seek('v1', 280.2)">4:40 Closing</button>
+      </div>
+      <div class="speeds" data-vid="v1">
+        <button class="spd active" onclick="rate('v1', 1, this)">1x</button>
+        <button class="spd" onclick="rate('v1', 1.25, this)">1.25x</button>
+        <button class="spd" onclick="rate('v1', 1.5, this)">1.5x</button>
+        <button class="spd" onclick="rate('v1', 2, this)">2x</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-card" id="github-with-an-agent">
+    <div class="vc-hdr">
+      <h2>2. Collaborator Foundations: GitHub with an Agent (Zero Terminal Commands)</h2>
+      <div class="vc-controls">
+        <span class="meta">3:29 &middot; 1080p</span>
+        <a class="dl-link" href="https://github.com/m4thnerd/lca_playbook/releases/download/v1.0.0/lca-playbook-github-with-an-agent-1080p.mp4">Download MP4</a>
+      </div>
+    </div>
+    <video id="v1b" controls preload="metadata" playsinline src="https://github.com/m4thnerd/lca_playbook/releases/download/v1.0.0/lca-playbook-github-with-an-agent-1080p.mp4"></video>
+    <div class="bar-row">
+      <div class="jumps">
+        <button class="jump" onclick="seek('v1b', 0)">0:00 One-Page Cheat Sheet</button>
+        <button class="jump" onclick="seek('v1b', 28.2)">0:28 Clone</button>
+        <button class="jump" onclick="seek('v1b', 54.3)">0:54 Main vs. Branch</button>
+        <button class="jump" onclick="seek('v1b', 74.7)">1:15 Worktree</button>
+        <button class="jump" onclick="seek('v1b', 90.0)">1:30 Commit &amp; Push</button>
+        <button class="jump" onclick="seek('v1b', 118.1)">1:58 Fetch &amp; Pull</button>
+        <button class="jump" onclick="seek('v1b', 136.4)">2:16 Pull Request (Draft vs. Ready)</button>
+        <button class="jump" onclick="seek('v1b', 161.4)">2:41 Merge Conflict</button>
+        <button class="jump" onclick="seek('v1b', 179.3)">2:59 One-Page Recap</button>
+      </div>
+      <div class="speeds" data-vid="v1b">
+        <button class="spd active" onclick="rate('v1b', 1, this)">1x</button>
+        <button class="spd" onclick="rate('v1b', 1.25, this)">1.25x</button>
+        <button class="spd" onclick="rate('v1b', 1.5, this)">1.5x</button>
+        <button class="spd" onclick="rate('v1b', 2, this)">2x</button>
+      </div>
+    </div>
+  </section>
+
+  <div class="track-label">Track 2 &middot; Software Engineers, Tech Leads &amp; LCA Operators</div>
+
+  <section class="video-card" id="engineer-deep-dive">
+    <div class="vc-hdr">
+      <h2>3. Engineer &amp; LCA Operator Technical Crash Course</h2>
+      <div class="vc-controls">
+        <span class="meta">10:31 &middot; 1080p</span>
+        <a class="dl-link" href="https://github.com/m4thnerd/lca_playbook/releases/download/v1.0.0/lca-playbook-engineer-deep-dive-1080p.mp4">Download MP4</a>
+      </div>
+    </div>
+    <video id="v2" controls preload="metadata" playsinline src="https://github.com/m4thnerd/lca_playbook/releases/download/v1.0.0/lca-playbook-engineer-deep-dive-1080p.mp4"></video>
+    <div class="bar-row">
+      <div class="jumps">
+        <button class="jump" onclick="seek('v2', 0)">0:00 Intro</button>
+        <button class="jump" onclick="seek('v2', 29.5)">0:29 Agent Context vs Human Mastery</button>
+        <button class="jump" onclick="seek('v2', 91.8)">1:31 Bound-Converge-Stabilize &amp; 4 Lanes</button>
+        <button class="jump" onclick="seek('v2', 134.4)">2:14 10x-30x Smaller Charter Surface</button>
+        <button class="jump" onclick="seek('v2', 195.2)">3:15 Operating Context (~40% to ~6%) &amp; Preflights</button>
+        <button class="jump" onclick="seek('v2', 327.8)">5:28 convergence-review</button>
+        <button class="jump" onclick="seek('v2', 389.8)">6:30 GSR &amp; Clean-Pass Trap</button>
+        <button class="jump" onclick="seek('v2', 499.6)">8:20 UX Loops &amp; Arch Posters</button>
+        <button class="jump" onclick="seek('v2', 572.3)">9:32 3-Step Setup</button>
+      </div>
+      <div class="speeds" data-vid="v2">
+        <button class="spd active" onclick="rate('v2', 1, this)">1x</button>
+        <button class="spd" onclick="rate('v2', 1.25, this)">1.25x</button>
+        <button class="spd" onclick="rate('v2', 1.5, this)">1.5x</button>
+        <button class="spd" onclick="rate('v2', 2, this)">2x</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-card" id="module-charters-deep-dive">
+    <div class="vc-hdr">
+      <h2>4. Module Charters &amp; Positional Lanes Deep Dive</h2>
+      <div class="vc-controls">
+        <span class="meta">10:10 &middot; 1080p</span>
+        <a class="dl-link" href="https://github.com/m4thnerd/lca_playbook/releases/download/v1.0.0/lca-playbook-module-charters-deep-dive-1080p.mp4">Download MP4</a>
+      </div>
+    </div>
+    <video id="v3" controls preload="metadata" playsinline src="https://github.com/m4thnerd/lca_playbook/releases/download/v1.0.0/lca-playbook-module-charters-deep-dive-1080p.mp4"></video>
+    <div class="bar-row">
+      <div class="jumps">
+        <button class="jump" onclick="seek('v3', 0)">0:00 Intro</button>
+        <button class="jump" onclick="seek('v3', 26.6)">0:27 Living Charters</button>
+        <button class="jump" onclick="seek('v3', 82.8)">1:23 Full-Spec &amp; Fast Share</button>
+        <button class="jump" onclick="seek('v3', 121.4)">2:01 Fast Lane &amp; Prototype Tables</button>
+        <button class="jump" onclick="seek('v3', 168.5)">2:48 Deletion vs Substitution</button>
+        <button class="jump" onclick="seek('v3', 196.0)">3:16 6-Part CHARTER.md</button>
+        <button class="jump" onclick="seek('v3', 245.7)">4:06 12-Story Before vs After</button>
+        <button class="jump" onclick="seek('v3', 288.2)">4:48 Ending Defensive Bloat</button>
+        <button class="jump" onclick="seek('v3', 335.5)">5:35 50+ Module Strangler Retrofit</button>
+        <button class="jump" onclick="seek('v3', 421.6)">7:02 10 Starter Hazard Tags</button>
+        <button class="jump" onclick="seek('v3', 471.5)">7:51 Derived Lane Map</button>
+        <button class="jump" onclick="seek('v3', 515.0)">8:35 Compatibility Review</button>
+        <button class="jump" onclick="seek('v3', 572.4)">9:32 3-Habit Playbook</button>
+      </div>
+      <div class="speeds" data-vid="v3">
+        <button class="spd active" onclick="rate('v3', 1, this)">1x</button>
+        <button class="spd" onclick="rate('v3', 1.25, this)">1.25x</button>
+        <button class="spd" onclick="rate('v3', 1.5, this)">1.5x</button>
+        <button class="spd" onclick="rate('v3', 2, this)">2x</button>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+  function pauseOthers(activeId) {
+    document.querySelectorAll('video').forEach(el => {
+      if (el.id !== activeId && !el.paused) el.pause();
+    });
+  }
+  document.querySelectorAll('video').forEach(el => {
+    el.addEventListener('play', () => pauseOthers(el.id));
+  });
+  function seek(id, t) {
+    const v = document.getElementById(id);
+    pauseOthers(id);
+    v.currentTime = t;
+    v.play();
+  }
+  function rate(id, r, btn) {
+    const v = document.getElementById(id);
+    v.playbackRate = r;
+    btn.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  function highlightTarget() {
+    document.querySelectorAll('.video-card').forEach(c => c.classList.remove('active-target'));
+    const h = (location.hash || '').replace(/^#/, '');
+    if (h) {
+      const card = document.getElementById(h);
+      if (card) card.classList.add('active-target');
+    }
+  }
+  window.addEventListener('hashchange', highlightTarget);
+  highlightTarget();
+</script>
+</body>
+</html>
