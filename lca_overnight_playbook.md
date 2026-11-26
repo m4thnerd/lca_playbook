@@ -6,6 +6,8 @@ Night-shift-specific guidance for the Lead Coding Agent. Read
 covers what changes when the LCA runs **autonomously overnight** while the human
 owner is unavailable.
 
+> **Prefer a walkthrough first?** Watch **[Video 5: Overnight Relays, Design Doc Slicing & Engineering Director (`12:12`)](https://m4thnerd.github.io/lca_playbook/#engineering-director-overnight)** in the interactive 1080p player.
+
 ## The one idea: you are a director, not an implementer
 
 Your own context window and clarity of judgment are the scarcest resources of

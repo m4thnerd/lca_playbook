@@ -3,6 +3,8 @@
 Companion to [lca_playbook.md](lca_playbook.md) for the optional coordination
 layer above multiple Lead Coding Agents (LCAs).
 
+> **Prefer a walkthrough first?** Watch **[Video 5: Overnight Relays, Design Doc Slicing & Engineering Director (`12:12`)](https://m4thnerd.github.io/lca_playbook/#engineering-director-overnight)** in the interactive 1080p player.
+
 The Engineering Director (EngD) coordinates **independently progressing
 workstreams**: it owns cross-stream priorities, shared interfaces, merge and
 deployment locks, removal of sequencing bottlenecks, and the combined delivery

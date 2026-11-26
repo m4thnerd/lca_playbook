@@ -1,5 +1,7 @@
 # Design Doc Slicing: Parent Doc + Sequence-Completable Slices
 
+> **Prefer a walkthrough first?** Watch **[Video 5: Overnight Relays, Design Doc Slicing & Engineering Director (`12:12`)](https://m4thnerd.github.io/lca_playbook/#engineering-director-overnight)** in the interactive 1080p player.
+
 This guide defines how the LCA turns a large brainstorm (roughly 15-50 user
 stories, far more scope than one design doc can carry) into a parent design doc
 plus a sequence of child slice docs. Each slice runs the

@@ -27,6 +27,10 @@ Click any card to open the **[interactive 1080p walkthrough player](https://m4th
 | [![Watch Video 1: Collaborator Overview (5:07)](docs/assets/video-collaborator-overview.png)](https://m4thnerd.github.io/lca_playbook/#collaborator-overview)<br>**[1. Collaborator Overview (`5:07`)](https://m4thnerd.github.io/lca_playbook/#collaborator-overview)** - Prototyping with an agent, Architecture Pressure `1-5`, User Stories & Essential Requirements, and visual HTML cards. | [![Watch Video 3: Technical Crash Course (10:34)](docs/assets/video-engineer-deep-dive.png)](https://m4thnerd.github.io/lca_playbook/#engineer-deep-dive)<br>**[3. Technical Crash Course (`10:34`)](https://m4thnerd.github.io/lca_playbook/#engineer-deep-dive)** - `Bound -> Converge -> Stabilize`, 3 preflights, `convergence-review`, `general-stability-review`, UX loops, and 3-step setup. |
 | [![Watch Video 2: GitHub with an Agent (3:29)](docs/assets/video-github-with-an-agent.png)](https://m4thnerd.github.io/lca_playbook/#github-with-an-agent)<br>**[2. GitHub with an Agent (`3:29`)](https://m4thnerd.github.io/lca_playbook/#github-with-an-agent)** - Zero terminal commands: branches, commits, Draft PRs, and merge conflicts on one calm cheat sheet. | [![Watch Video 4: Module Charters & Positional Lanes (10:10)](docs/assets/video-module-charters-deep-dive.png)](https://m4thnerd.github.io/lca_playbook/#module-charters-deep-dive)<br>**[4. Module Charters & Positional Lanes (`10:10`)](https://m4thnerd.github.io/lca_playbook/#module-charters-deep-dive)** - `Fast` & `Full-Spec` lanes, Day-2 evolution, `50+` module strangler retrofits, and `10` starter Hazard Tags. |
 
+| Scaling to Overnight Shifts & Multi-Stream Programs (Engineers & Tech Leads) | |
+|---|---|
+| [![Watch Video 5: Overnight Relays, Design Doc Slicing & Engineering Director (12:12)](docs/assets/video-engineering-director-overnight.png)](https://m4thnerd.github.io/lca_playbook/#engineering-director-overnight) | **[5. Overnight Relays, Design Doc Slicing & Engineering Director (`12:12`)](https://m4thnerd.github.io/lca_playbook/#engineering-director-overnight)**<br><br>Scale disciplined agent execution from one verified slice to `70-160` user stories overnight and multi-stream autonomous programs:<br>- **Design Doc Slicing:** `1-10` ER cap per slice with no cap on User Stories (`1` ER often satisfies `3-4` stories), Thin Orientation Parent, Single-Ownership Rule, and just-in-time preflights.<br>- **Overnight Relays & Field Traps:** Exact-context preflight, 5-step slice cadence, Autonomous Context Checkpointing, 3 real night-shift traps (blocked gates, `900s` display-off stalls, scope drift), and visual `morning-report.html` decision cards.<br>- **Engineering Director Layer:** Default to one LCA, 3 proven multi-LCA shapes, control-tower topology, parallelize independent / unify overlapping seams, 6-part dispatch packets, and event-driven supervision. |
+
 ---
 
 ## Why Teams Use the LCA Playbook
@@ -260,6 +264,7 @@ infographic posters color-coded by lane.
 ![Ambitious UX decision package](docs/assets/ambitious-ux-gallery.png)
 
 ### Multi-Slice, Overnight, and Multi-Stream Coordination
+- **[Video Walkthrough: Overnight Relays, Design Doc Slicing & Engineering Director (`12:12`)](https://m4thnerd.github.io/lca_playbook/#engineering-director-overnight)**
 - [Design Doc Slicing (Parent Doc + Sequence-Completable Slices)](requirements/design_doc_slicing.md)
 - [Overnight LCA Playbook](lca_overnight_playbook.md)
 - [Engineering Director Playbook](engineering_director_playbook.md)
